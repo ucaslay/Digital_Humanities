@@ -3,17 +3,17 @@
 people
 *id integer
 - name varchar
-- Attendance => attendance.id
-- Homework
-- Groups
+- attendance => attendance.id
+- homework => homework.score
+- groups => project.id
 
-Attendance
+attendance
 *id integer
 - date_of_attendance
 
-Homework
-score
+homework
+- score
 
-Project
+project
 *id integer
 - names => people.id
