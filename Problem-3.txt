@@ -1,17 +1,17 @@
 #problem 3
 
-People
+people
 *id integer
 - name varchar
-- d.o.b.
-- Artist or Reviewer
+- born? date
+- artist or Reviewer
 
-Performance
+performance
 *id integer
 - performance by => people.id
 - style
-- date
-- location
+- when? date
+- where? location
 
 Review
 *id integer
