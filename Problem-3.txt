@@ -1,0 +1,19 @@
+#problem 3
+
+People
+*id integer
+- name varchar
+- d.o.b.
+- Artist or Reviewer
+
+Performance
+*id integer
+- performance by => people.id
+- style
+- date
+- location
+
+Review
+*id integer
+- reviewer => people.id
+- playbill or newspaper

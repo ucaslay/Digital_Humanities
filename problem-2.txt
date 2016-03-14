@@ -1,0 +1,19 @@
+# Schema for Problem 2
+
+people
+*id integer
+- name varchar
+- Attendance => attendance.id
+- Homework
+- Groups
+
+Attendance
+*id integer
+- date_of_attendance
+
+Homework
+score
+
+Project
+*id integer
+- names => people.id

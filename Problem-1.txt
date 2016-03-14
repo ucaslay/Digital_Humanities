@@ -1,0 +1,20 @@
+# Schema for Problem 1
+
+# Here is a table for people.
+people
+*id integer
+- name varchar
+- borrowed_books_id? => books.id
+
+books
+*id integer
+- title varchar
+- author varchar
+- date_published
+- signature
+
+Lending
+*id integer
+- date_borrowed
+- borrowed_boors_id => books.id
+- borrower_id => people.id
