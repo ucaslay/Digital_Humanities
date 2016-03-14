@@ -10,11 +10,11 @@ books
 *id integer
 - title varchar
 - author varchar
-- date_published
+- published? date
 - signature
 
 Lending
 *id integer
-- date_borrowed
-- borrowed_boors_id => books.id
+- borrowed? date
+- borrowed_books_id => books.id
 - borrower_id => people.id
