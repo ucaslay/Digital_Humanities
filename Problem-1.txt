@@ -1,17 +1,21 @@
 # Schema for Problem 1
 
 # Here is a table for people.
-people
-*id integer
-- name varchar
-- borrowed_books_id? => books.id
-
+## NOTE 1: you always have to tell a varchar how many characters it can have!
+## NOTE 2: I switched around the table order so that columns are defined
+##         before they are referenced.
+## NOTE 3: You didn't specify a data type for signature, so I guessed.
 books
 *id integer
-- title varchar
-- author varchar
+- title varchar(100)
+- author varchar(50)
 - published? date
-- signature
+- signature varchar(20)
+
+people
+*id integer
+- name varchar(50)
+- borrowed_books_id? => books.id
 
 Lending
 *id integer
