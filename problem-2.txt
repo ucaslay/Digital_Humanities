@@ -1,19 +1,23 @@
 # Schema for Problem 2
 
-people
-*id integer
-- name varchar
-- attendance => attendance.id
-- homework => homework.score
-- groups => project.id
+## NOTE 1: you always have to tell a varchar how many characters it can have!
+## NOTE 2: You have a circular reference: people -> project -> people. We
+##         can't do this in MySQL; we have to use a joining table instead!
 
 attendance
 *id integer
-- date_of_attendance
+- date_of_attendance date
 
 homework
-- score
+- score integer
 
 project
 *id integer
 - names => people.id
+
+people
+*id integer
+- name varchar(50)
+- attendance => attendance.id
+- homework => homework.score
+- groups => project.id

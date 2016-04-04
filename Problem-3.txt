@@ -1,19 +1,26 @@
 #problem 3
 
+## NOTE 1: you always have to tell a varchar how many characters it can have!
+## NOTE 2: I switched around the table order so that columns are defined
+##         before they are referenced.
+## NOTE 3: Column names can't have spaces, and must have a datatype, so I
+##         changed 'artist or Reviewer' as well as 'playbill or newspaper'.
+
 people
 *id integer
-- name varchar
+- name varchar(50)
 - born? date
-- artist or Reviewer
+- artist_or_Reviewer varchar(8)
 
+## NOTE 4: 'location' is not a datatype, so I changed it to varchar.
 performance
 *id integer
-- performance by => people.id
-- style
+- performance_by => people.id
+- style varchar(20)
 - when? date
-- where? location
+- where? varchar(50)
 
 Review
 *id integer
 - reviewer => people.id
-- playbill or newspaper
+- playbill_or_newspaper varchar(10)
